@@ -1,0 +1,22 @@
+{% extends "base.html" %} 
+{% block content %}
+        <h1>Enter name:</h1>
+        <form action='/hello' method='POST'>
+            Enter your name:
+            <input type='text' name='first_name' value='' />
+            <input type='submit' value='Submit' />
+        </form>
+        
+        <h1>Validate Time</h1>
+        <form method="POST">
+            <label>Hours (24-hour format)
+                <input name="hours" type="text" value="{{hours}}" />
+            </label>
+            <p class="error">{{hours_error}}</p>
+            <label>Minutes
+                <input name="minutes" type="text" value="{{minutes}}" />
+            </label>
+            <p class="error"> {{minutes_error}}</p>
+            <input type="submit" value="Validate" />
+        </form>
+{% endblock %}
