@@ -1,5 +1,7 @@
 from flask import Flask, request, redirect
 import cgi
+import os
+import jinja2
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -36,7 +38,7 @@ def display_time_form():
 def is_integer(num):
     try:
         int(num)
-        return True
+        return TrueP
     except ValueError:
         return False
 
